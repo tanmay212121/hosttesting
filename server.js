@@ -3,13 +3,13 @@ const path = require('path');
 const app = express();
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'clienttwo/build')));
 
 // Other API routes or backend logic here...
 
 // Handle React routing, return all requests to React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'clienttwo/build', 'index.html'));
 });
 
 // Start server
